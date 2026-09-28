@@ -1,7 +1,6 @@
 """
 Interactive Book Predictor for VS Code
 Library Book Search & Recommendation System Using NLP
-College Mini Project — Integrates Experiments 1 through 10
 """
 
 import os
@@ -19,8 +18,6 @@ if sys.platform.startswith("win"):
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from modules.similarity import book_recommender
-from modules.preprocessing import preprocess_text
-from modules.morphology import analyze_morphology
 from modules.pos_tagging import tag_pos
 from modules.chunking import extract_chunks
 from modules.ner import extract_named_entities
@@ -28,16 +25,15 @@ from modules.ner import extract_named_entities
 
 def predict_by_book_name(book_title: str, top_k: int = 5):
     """
-    Finds a target book in the catalog, runs NLP linguistic analysis on its synopsis
-    across experiments (Preprocessing, POS Tagging, Chunking, NER), and predicts
-    the top similar books using TF-IDF Cosine Similarity (Exp 9).
+    Finds a target book in the catalog, runs NLP linguistic analysis on its synopsis,
+    and predicts the top similar books using TF-IDF Cosine Similarity.
     """
     clean_query = book_title.strip()
     if not clean_query:
         print("Please enter a valid book title.")
         return None
 
-    # Search in dataset (books.csv)
+    # Search in dataset
     df_books = book_recommender.df_books
     match = df_books[df_books["title"].str.lower().str.contains(clean_query.lower())]
 
@@ -59,63 +55,43 @@ def predict_by_book_name(book_title: str, top_k: int = 5):
     target_rating = target_row["rating"]
     target_desc = target_row["description"]
 
-    # Compute recommendations via Exp 9 (similarity module)
+    # Compute recommendations via similarity module
     res = book_recommender.find_similar_to_book(target_title, top_k=top_k)
 
     print("\n" + "=" * 78)
-    print("📚 TARGET BOOK IDENTIFIED IN LIBRARY CATALOG (data/books.csv)")
+    print("TARGET BOOK FOUND IN LIBRARY DATASET")
     print("=" * 78)
     print(f"Title:       {target_title}")
     print(f"Author:      {target_author}")
     print(f"Genre:       {target_genre}")
-    print(f"Published:   {target_year} | Rating: ⭐ {target_rating}/5")
+    print(f"Published:   {target_year} | Rating: {target_rating}/5")
     print(f"Synopsis:    {target_desc}")
 
-    # =========================================================================
-    # NLP PIPELINE EXECUTION FOR THIS SELECTED BOOK (EXPERIMENTS 2, 3, 6, 7, 8)
-    # =========================================================================
-    print("\n" + "-" * 78)
-    print("🧠 CONNECTED NLP PIPELINE STAGES EXECUTED ON THIS BOOK")
-    print("-" * 78)
-
-    # 1. Exp 2 & 3: Preprocessing, Stop Words & Lemmatization
-    prep_res = preprocess_text(target_desc)
-    key_lemmas = prep_res["lemmatized_tokens"][:8]
-    print(f"• [Exp 2 & 3 - Preprocessing]: Lemmatized Tokens:")
-    print(f"   -> {', '.join(key_lemmas)} ...")
-
-    # 2. Exp 6: POS Tagging
+    # Extract NLP Linguistic Features from Book Synopsis
     pos_res = tag_pos(target_desc)
-    sample_tags = [f"{w}/{t}" for w, t in pos_res["tagged_tuples"][:6]]
-    print(f"• [Exp 6 - POS Tagging]: Grammatical Part-of-Speech Tags:")
-    print(f"   -> {' '.join(sample_tags)} ...")
-
-    # 3. Exp 7: Chunking (Noun Phrase Extraction)
     chunk_res = extract_chunks(pos_res["tagged_tuples"])
+    ner_res = extract_named_entities(target_desc)
+
+    print("\n" + "-" * 78)
+    print("NLP LINGUISTIC ANALYSIS (FROM BOOK SYNOPSIS)")
+    print("-" * 78)
     if chunk_res.get("extracted_phrases"):
         phrases = [
             p["phrase"] if isinstance(p, dict) else str(p)
             for p in chunk_res["extracted_phrases"][:4]
         ]
-        print(f"• [Exp 7 - Phrase Chunking]: Extracted Key Noun Phrases:")
-        print(f"   -> {', '.join(phrases)}")
+        print(f"- Key Noun Phrases: {', '.join(phrases)}")
 
-    # 4. Exp 8: Named Entity Recognition (NER)
-    ner_res = extract_named_entities(target_desc)
     if ner_res.get("entities"):
         ents = [
             f"{e['entity']} ({e['label']})"
             for e in ner_res["entities"][:5]
         ]
-        print(f"• [Exp 8 - Named Entity Recognition]: Catalog Entities Identified:")
-        print(f"   -> {', '.join(ents)}")
+        print(f"- Named Entities:   {', '.join(ents)}")
 
-    # =========================================================================
-    # PREDICTION RESULTS VIA EXPERIMENT 9 (TF-IDF COSINE SIMILARITY)
-    # =========================================================================
     recs = res.get("recommendations", [])
     print("\n" + "=" * 78)
-    print(f"🎯 [Exp 9 - Text Similarity]: TOP {len(recs)} PREDICTED SIMILAR BOOKS")
+    print(f"TOP {len(recs)} PREDICTED SIMILAR BOOKS (TF-IDF COSINE SIMILARITY)")
     print("=" * 78)
 
     header = f"{'#':<3} | {'Book Title':<32} | {'Author':<20} | {'Genre':<14} | {'Match %':<8}"
@@ -128,10 +104,10 @@ def predict_by_book_name(book_title: str, top_k: int = 5):
         print(f"{idx:<3} | {title:<32} | {author:<20} | {b['genre']:<14} | {b['match_percentage']:<8}")
 
     print("=" * 78)
-    print("\nDetailed Descriptions & Similarity Breakdown:")
+    print("\nDetailed Descriptions of Predicted Similar Books:")
     for idx, b in enumerate(recs, 1):
-        print(f"\n{idx}. {b['title']} (Cosine Match: {b['match_percentage']})")
-        print(f"   Author: {b['author']} | Genre: {b['genre']} | Rating: ⭐ {b['rating']}/5")
+        print(f"\n{idx}. {b['title']} (Match: {b['match_percentage']})")
+        print(f"   Author: {b['author']} | Genre: {b['genre']} | Rating: {b['rating']}/5")
         print(f"   Synopsis: {b['description']}")
 
     print("\n" + "=" * 78)
@@ -155,10 +131,10 @@ SAMPLE_BOOKS = [
 def interactive_cli():
     """Interactive loop for entering multiple book queries inside VS Code."""
     print("=" * 78)
-    print("📚 LIBRARY BOOK SEARCH & RECOMMENDATION SYSTEM — PREDICTOR (VS CODE)")
+    print("LIBRARY BOOK SEARCH & RECOMMENDATION SYSTEM -- PREDICTOR (VS CODE)")
     print("=" * 78)
     print("Dataset contains 40 curated books across 10 diverse genres.")
-    print("\nSample Book Titles you can test from catalog:")
+    print("\nSample Book Titles you can test:")
     for i, t in enumerate(SAMPLE_BOOKS, 1):
         print(f"  [{i:2d}] {t}")
 
