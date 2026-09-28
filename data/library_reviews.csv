@@ -1,0 +1,61 @@
+review,sentiment
+"This book is excellent and very informative. I learned so much from every chapter.",Positive
+"The book is boring and difficult to understand. I struggled to finish it.",Negative
+"An absolutely fantastic novel with gripping plot twists and wonderful characters.",Positive
+"Terrible writing style, weak character development, and a completely predictable ending.",Negative
+"It is an average book with some good chapters but nothing remarkable.",Neutral
+"I thoroughly enjoyed reading this masterpiece. Highly recommended to everyone!",Positive
+"Complete waste of time. The explanations were poorly organized and confusing.",Negative
+"A decent introduction to the subject, suitable for college students.",Neutral
+"Brilliant explanations and beautiful illustrations. A must-read for any library visitor.",Positive
+"Very disappointing read. The book was full of grammatical errors and repetitive arguments.",Negative
+"The story was okay, neither particularly exciting nor terrible.",Neutral
+"Outstanding research and engaging storytelling by the author. A true gem!",Positive
+"Awful pacing and utterly tedious. I could not connect with the protagonist at all.",Negative
+"The textbook covers basic syllabus topics satisfactorily without going into great depth.",Neutral
+"Inspiring and deeply moving autobiography. It changed my perspective completely.",Positive
+"Very dull and dry textbook. Does not explain practical examples properly.",Negative
+"Fairly balanced overview of modern technology. Good as an introductory reference.",Neutral
+"Exceptional clarity on complex machine learning algorithms. Best resource in our college library.",Positive
+"Poor quality book. Many factual inaccuracies and outdated source materials.",Negative
+"Standard library edition with normal print quality and average layout.",Neutral
+"Loved every single page of this fantasy classic. J.K. Rowling created magic!",Positive
+"Boring narrative and very slow development. Took forever to get to the point.",Negative
+"The concepts are explained well enough for exam preparation.",Neutral
+"A wonderful and heartwarming novel that kept me hooked until late midnight.",Positive
+"Utterly unreadable garbage. I returned it to the library the very next morning.",Negative
+"The book contains moderate information that is neither too simple nor too advanced.",Neutral
+"Incredible insights into human psychology and habit formation. Truly life-changing!",Positive
+"Horrible reading experience. Disjointed chapters and incoherent arguments.",Negative
+"A typical reference manual for students looking for quick formula lookups.",Neutral
+"Masterpiece of world literature. Rich philosophical depth and timeless themes.",Positive
+"Completely overrated book. The author drags simple concepts across hundreds of pages.",Negative
+"The book covers standard syllabus content adequately.",Neutral
+"Superb thriller with breathtaking suspense. Kept me on the edge of my seat.",Positive
+"Extremely frustrating and confusing explanations. Not recommended for beginners.",Negative
+"An ordinary read that meets basic expectations for coursework.",Neutral
+"Magnificent writing and deep character exploration. One of my all-time favorites.",Positive
+"Disastrous plot and wooden dialogue. Highly dissatisfied with this author.",Negative
+"A general overview book with standard topics and moderate clarity.",Neutral
+"Fascinating historical account written with great empathy and thorough scholarship.",Positive
+"Dull and monotonous tone throughout. Put me to sleep within ten pages.",Negative
+"Contains acceptable factual information suitable for quick classroom review.",Neutral
+"Splendid software design patterns explained with concise clean code examples.",Positive
+"Lacks depth and glosses over vital engineering concepts. Highly disappointing.",Negative
+"Readable enough for casual skimming during library study sessions.",Neutral
+"A breathtaking exploration of astronomy and the vast cosmos. Pure inspiration.",Positive
+"Cheaply constructed narrative with flat clichés and zero emotional resonance.",Negative
+"A standard introductory guide that fulfills academic requirements.",Neutral
+"Remarkable clarity on data structures and algorithms. Helped me ace my placement exam.",Positive
+"Painfully slow and filled with irrelevant digressions. Regret borrowing this one.",Negative
+"Presents an ordinary summary of historical events without strong analysis.",Neutral
+"A thrilling mystery full of clever clues and unexpected turns. Loved it!",Positive
+"Badly written with confusing diagrams and careless technical mistakes.",Negative
+"Provides an acceptable summary for general readers.",Neutral
+"An unforgettable classic that resonates deeply with human nature and justice.",Positive
+"Worst book I have checked out this semester. Totally meaningless.",Negative
+"Contains adequate background notes for university seminar discussion.",Neutral
+"Beautifully crafted prose and poetic descriptions that touch your soul.",Positive
+"Vague explanations and superficial treatment of critical scientific subjects.",Negative
+"Moderate pacing with satisfactory background documentation.",Neutral
+"Brilliantly articulated guide to building scalable, high-performance distributed systems.",Positive

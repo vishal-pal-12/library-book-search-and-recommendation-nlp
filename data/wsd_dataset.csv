@@ -1,0 +1,61 @@
+sentence,target_word,sense
+"I borrowed an interesting novel from the college library yesterday.",novel,BOOK
+"The novel has a gripping story and unforgettable characters.",novel,BOOK
+"She spent the entire weekend reading a classic historical novel.",novel,BOOK
+"The author published his third mystery novel last winter.",novel,BOOK
+"He returned the overdue novel to the library front desk.",novel,BOOK
+"This romantic novel won several prestigious literary awards.",novel,BOOK
+"I love reading a fantasy novel before going to bed at night.",novel,BOOK
+"The librarian recommended a wonderful adventure novel for teenagers.",novel,BOOK
+"Her latest novel became an international bestseller across fifty countries.",novel,BOOK
+"The student checked out three novel volumes for the summer break.",novel,BOOK
+"This science fiction novel explores parallel dimensions and time travel.",novel,BOOK
+"The English professor assigned a nineteenth-century Victorian novel to the class.",novel,BOOK
+"I found this secondhand novel in an old bookstore downtown.",novel,BOOK
+"The novel portrays the struggles of working-class families during the depression.",novel,BOOK
+"He wrote a compelling graphic novel depicting mythological heroes.",novel,BOOK
+"Every chapter of this thriller novel keeps you on the edge of your seat.",novel,BOOK
+"The library has a vast collection of detective novel series.",novel,BOOK
+"She donated twenty hardcover novel copies to the municipal library.",novel,BOOK
+"This autobiographical novel reflects the author's own turbulent childhood.",novel,BOOK
+"I lost the library novel while traveling on the commuter train.",novel,BOOK
+"The famous novel was adapted into an Oscar-winning cinema film.",novel,BOOK
+"Readers were fascinated by the character arcs in the psychological novel.",novel,BOOK
+"He bought a newly published dystopian novel from the campus fair.",novel,BOOK
+"The bookstore organized a signing session for the debut novel.",novel,BOOK
+"Our book club selected a contemporary African novel for this month.",novel,BOOK
+"The plot twists in this detective novel are truly unpredictable.",novel,BOOK
+"I enjoy relaxing on Sundays with a cup of tea and a good novel.",novel,BOOK
+"The protagonist of the novel embarks on a spiritual pilgrimage.",novel,BOOK
+"She specializes in analyzing thematic motifs across the modern American novel.",novel,BOOK
+"Borrowing a hardcover novel from the university library is very easy.",novel,BOOK
+"The researcher proposed a novel approach to solve the optimization problem.",novel,NEW
+"The scientist developed a novel technique for gene editing.",novel,NEW
+"This engineering thesis introduces a novel architecture for neural networks.",novel,NEW
+"The laboratory demonstrated a novel method for converting solar energy.",novel,NEW
+"Doctors tested a novel drug to treat resistant bacterial infections.",novel,NEW
+"Her experiment yielded novel insights into quantum computing.",novel,NEW
+"The startup patented a novel algorithm for real-time video compression.",novel,NEW
+"This discovery offers a novel perspective on ancient climate change.",novel,NEW
+"The professor suggested a novel framework for analyzing economic inequality.",novel,NEW
+"Engineers designed a novel cooling mechanism for high-power data centers.",novel,NEW
+"The team formulated a novel hypothesis regarding dark matter distribution.",novel,NEW
+"The surgeon implemented a novel procedure with minimal recovery time.",novel,NEW
+"This software presents a novel solution to automated language translation.",novel,NEW
+"The university robotics lab unveiled a novel sensor for drone navigation.",novel,NEW
+"We need a novel strategy to overcome these persistent supply chain delays.",novel,NEW
+"The chemical engineers synthesized a novel polymer with high thermal resistance.",novel,NEW
+"The paper presents a novel paradigm in distributed ledger consensus.",novel,NEW
+"Our study reveals novel evidence regarding bird migration patterns.",novel,NEW
+"They devised a novel synthesis route that reduces industrial chemical waste.",novel,NEW
+"The entrepreneur came up with a novel business model for electric vehicle charging.",novel,NEW
+"The committee welcomed this novel initiative to promote renewable energy.",novel,NEW
+"The mathematician proved the theorem using a novel geometric concept.",novel,NEW
+"This publication introduces a novel benchmark for evaluating speech models.",novel,NEW
+"The biochemist discovered a novel enzyme capable of decomposing microplastics.",novel,NEW
+"The startup gained market attention through its novel advertising campaign.",novel,NEW
+"Researchers introduced a novel methodology for detecting seismic anomalies.",novel,NEW
+"The team created a novel user interface for disabled individuals.",novel,NEW
+"This breakthrough represents a novel advancement in cancer immunotherapy.",novel,NEW
+"The economist outlined a novel fiscal policy to stimulate domestic growth.",novel,NEW
+"The paper proposes a novel convolutional structure for satellite image processing.",novel,NEW
